@@ -1,0 +1,17 @@
+{
+    "name": "NaZMaLogy App",
+  "short_name": "NaZMaLogy App",
+  "description": "Bersama NaZMaLogy Berinovasi Mewujudkan Mimpi, Ubah Impian Menjadi Kenyataan dengan Platform Pembelajaran Interaktif dan Inovatif.",
+  "icons": [
+    {
+      "src": "assets/img/logo-mobile.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff"
+}

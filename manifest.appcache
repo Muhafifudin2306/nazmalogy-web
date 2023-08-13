@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# Versi aplikasi: 1.0.0
+
+CACHE:
+/path/ke/file.css
+/path/ke/file.js
+/path/ke/gambar.jpg
+
+NETWORK:
+*
+
+FALLBACK:
+/offline /offline.html

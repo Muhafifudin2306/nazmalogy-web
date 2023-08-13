@@ -1,0 +1,92 @@
+.green-image {
+    background-color: lightgreen;
+    color: green;
+}
+
+.yellow-image {
+    background-color: lightyellow;
+    color: rgb(255, 174, 0);
+}
+
+.red-image {
+    background-color: rgb(255, 189, 200);
+    color: rgb(245, 14, 53);
+}
+
+.blue-image {
+    background-color: lightblue;
+    color: rgb(56, 56, 255);
+}
+
+
+/* Style Section Kelas berjalan */
+
+body #gallery {
+    overflow-x: hidden;
+}
+
+#gallery .button-gallery .btn-gallery {
+    font-size: 32px;
+    background-color: #fff;
+    color: var(--first-color);
+    padding: 10px;
+}
+
+#gallery .button-gallery .btn-gallery:hover {
+    color: #fff;
+    background-color: var(--first-color);
+}
+
+#gallery .gallery-card-lg {
+    height: 400px;
+    width: 300px;
+}
+
+.gallery-card-lg .card-gallery {
+    box-shadow: 0px 8px 8px 0px rgba(211, 211, 211, 0.2);
+}
+
+.gallery-card-lg .card-gallery .course-image {
+    height: 200px;
+}
+
+.marker {
+    margin-top: -200px;
+    height: 200px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 30%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-gallery .course-image img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-gallery .course-title {
+    padding: 10px;
+    height: 80px;
+}
+
+.card-gallery .course-progress {
+    padding: 10px 50px;
+    height: 40px;
+}
+
+.card-gallery .course-detail {
+    padding: 10px;
+    height: 60px;
+}
+
+.progress-bar {
+    background-color: var(--first-color);
+}
+
+#gallery__course .card-gallery {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+}

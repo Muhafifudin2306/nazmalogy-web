@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@700&display=swap');
+
+
+:root {
+    --font-1: "Nunito", sans-serif;
+    --font-2: 'Lexend Deca', sans-serif;
+    --blue-1: #2c2f75;
+    --blue-2: #00539E;
+    --blue-3: #0099C4;
+    --orange-1: #F27F0C;
+    --orange-2: #F7AD19;
+    --default-1: #F3F4FF;
+    --default-2: #A8AEFF;
+    --default-3: #ffff;
+    --black-1: #1a181d;
+    --font-size-7: 0.9rem;
+    --font-size-8: 0.8rem;
+    --font-size-9: 0.7rem;
+}
+
+body {
+    font-family: var(--font-1);
+    background-color: var(--default-1);
+}
+
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+
+.text-2 {
+    font-family: var(--font-2) !important;
+}
+
+.text-blue-1 {
+    color: var(--blue-1) !important;
+}
+
+.text-blue-2 {
+    color: var(--blue-2) !important;
+}
+
+.text-blue-3 {
+    color: var(--blue-3) !important;
+}
+
+.text-orange-1 {
+    color: var(--orange-1) !important;
+}
+
+.text-orange-2 {
+    color: var(--orange-2) !important;
+}
+
+.bg-blue-1 {
+    background-color: var(--blue-1) !important;
+}
+
+.bg-blue-2 {
+    background-color: var(--blue-2) !important;
+}
+
+.bg-blue-3 {
+    background-color: var(--blue-3) !important;
+}
+
+.bg-orange-1 {
+    background-color: var(--orange-1) !important;
+}
+
+.bg-orange-2 {
+    background-color: var(--orange-2) !important;
+}
+
+.bg-default-1 {
+    background-color: var(--default-1) !important;
+}
+
+.bg-default-2 {
+    background-color: var(--default-2) !important;
+}
+
+.btn-blue-1 {
+    background-color: var(--blue-1) !important;
+    border-color: var(--blue-1) !important;
+    color: var(--default-3) !important;
+}
+
+.btn-blue-1:hover {
+    background-color: var(--blue-2) !important;
+    border-color: var(--blue-2) !important;
+}
+
+.btn-blue-2 {
+    background-color: var(--blue-2) !important;
+    border-color: var(--blue-2) !important;
+    color: var(--default-3) !important;
+}
+
+.btn-blue-2:hover {
+    background-color: var(--blue-3) !important;
+    border-color: var(--blue-3) !important;
+}
+
+.btn-orange-1 {
+    background-color: var(--orange-2) !important;
+    border-color: var(--orange-2) !important;
+    color: var(--default-3) !important;
+}
+
+.btn-orange-1:hover {
+    background-color: var(--orange-1) !important;
+    border-color: var(--orange-1) !important;
+    color: var(--default-3) !important;
+}
+
+.fs-7 {
+    font-size: var(--font-size-7) !important;
+}
+
+.fs-8 {
+    font-size: var(--font-size-8) !important;
+}
+
+.fs-9 {
+    font-size: var(--font-size-9) !important;
+}
+
+/* Alert */
+
+.colored-toast.swal2-icon-error {
+    background-color: #f27474 !important;
+}
+
+.swal2-title {
+    color: #fff !important;
+}
+
+.swal2-timer-progress-bar {
+    background-color: #fff !important;
+}
+
+.colored-toast.swal2-icon-success {
+    background-color: #a5dc86 !important;
+}

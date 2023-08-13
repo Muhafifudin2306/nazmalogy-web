@@ -1,0 +1,15 @@
+.left-side-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.card-email {
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .card-email {
+        width: 100% !important;
+    }
+}

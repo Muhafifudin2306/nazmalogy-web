@@ -1,0 +1,134 @@
+:root {
+    --blue-1: #2c2f75;
+    --blue-2: #00539E;
+    --blue-3: #0099C4;
+    --orange-1: #F27F0C;
+    --orange-2: #F7AD19;
+    --default-1: #F3F4FF;
+    --default-2: #A8AEFF;
+    --default-3: #ffff;
+    --black-1: #1a181d;
+    --font-size-7: 0.9rem;
+    --font-size-8: 0.8rem;
+    --font-size-9: 0.7rem;
+}
+
+/* Navbar */
+.navbar .nav-item a {
+    color: var(--black-1);
+    font-size: 17px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+.navbar .nav-item a:hover {
+    color: var(--blue-1) !important;
+    text-decoration: underline !important;
+}
+
+.nav-item .active {
+    color: var(--blue-1) !important;
+    font-weight: 800;
+    text-decoration: underline !important;
+    border-bottom-color: var(--blue-1);
+}
+
+
+
+/* Header Phone */
+
+/*=============== HEADER ===============*/
+li {
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    #header-phone {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: none !important;
+    }
+}
+
+.header-phone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--default-1);
+    z-index: 9999;
+    transition: 0.4s;
+}
+
+/*=============== NAV ===============*/
+.nav__phone {
+    /* height: var(--header-height); */
+    display: flex;
+    position: relative;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__img {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.nav__logo {
+    color: var(--black-1);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--default-3);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 4rem;
+        padding-top: 10px;
+        display: grid;
+        align-content: center;
+        transition: 0.4s;
+    }
+}
+
+.nav__list,
+.nav__link {
+    display: flex;
+}
+
+.nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    color: var(--black-1);
+    font-weight: 600;
+}
+
+.nav__list {
+    justify-content: space-around;
+    padding: 0;
+}
+
+.nav__name {
+    font-size: var(--black-1);
+}
+
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+/*Active link*/
+.active-link {
+    position: relative;
+    color: var(--blue-1) !important;
+    transition: 0.3s;
+}
