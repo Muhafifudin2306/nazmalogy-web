@@ -353,4 +353,18 @@ class UserModel extends CI_Model
         $this->db->where('id_user', $id);
         $this->db->update('members', $data);
     }
+
+    public function updateLastLogin($user_id) {
+        $this->db->set('last_login', 'NOW()', false);
+        $this->db->where('id', $user_id);
+        $this->db->update('users');
+    }
+
+    public function getRecentlyLoggedInUsers() {
+        $this->db->select('id, name, email, last_login');
+        $this->db->where('last_login > DATE_SUB(NOW(), INTERVAL 1 DAY)'); // Adjust the time frame as needed
+        $query = $this->db->get('users');
+        return $query->result(); 
+    }
+    
 }

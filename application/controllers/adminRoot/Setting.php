@@ -25,6 +25,7 @@ class Setting extends CI_Controller
             'id_role' => $this->session->userdata('id_role'),
             'users' => $this->UserModel->get_all_user(),
             'subscribes' => $this->UserModel->get_all_subscribe(),
+            'logged_in_users' => $this->UserModel->getRecentlyLoggedInUsers(), // Add this line
             'testimonies' => $this->UserModel->get_all_testimony()
         ];
         $this->load->view('pages/admin/superadmin/setting/index', $data);
@@ -186,4 +187,6 @@ class Setting extends CI_Controller
             redirect('adminRoot/setting');
         }
     }
+
+    
 }

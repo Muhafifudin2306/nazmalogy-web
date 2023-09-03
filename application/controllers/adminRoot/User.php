@@ -99,4 +99,11 @@ class User extends CI_Controller
             redirect('adminRoot/setting');
         }
     }
+
+    public function updateLastLogin($id) {
+        $this->db->set('last_login', 'NOW()', false);
+        $this->db->where('id', $id);
+        $this->db->update('users');
+    }
+    
 }

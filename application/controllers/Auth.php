@@ -100,28 +100,34 @@ class Auth extends CI_Controller
             $email = $this->input->post('email');
             $password = $this->input->post('password');
             $query = $this->db->get_where('users', array('email' => $email));
-
+        
             if ($query->num_rows() > 0) {
-                  $data_user = $query->row();
-                  if (password_verify($password, $data_user->password)) {
-                        $session_data = array(
-                              'email' => $email,
-                              'name' => $data_user->name,
-                              'id' => $data_user->id,
-                              'id_role' => $data_user->id_role,
-                              'is_login' => TRUE
-                        );
-                        $this->session->set_userdata($session_data);
-                        $this->session->set_flashdata('success_login', 'Login Berhasil');
-                        $user = $this->AuthModel->getUserByUsername($email);
-                        if ($user->id_role == 1) {
-                              redirect('adminRoot/user/page');
-                        } else {
-                              redirect('userBranch/user/page');
-                        }
-                  }
+                $data_user = $query->row();
+                if (password_verify($password, $data_user->password)) {
+                    // Load the UserModel here
+                    $this->load->model('UserModel');
+        
+                    // Pass the user's ID to the updateLastLogin method
+                    $this->UserModel->updateLastLogin($data_user->id);
+        
+                    $session_data = array(
+                        'email' => $email,
+                        'name' => $data_user->name,
+                        'id' => $data_user->id,
+                        'id_role' => $data_user->id_role,
+                        'is_login' => TRUE
+                    );
+                    $this->session->set_userdata($session_data);
+                    $this->session->set_flashdata('success_login', 'Login Berhasil');
+                    $user = $this->AuthModel->getUserByUsername($email);
+                    if ($user->id_role == 1) {
+                        redirect('adminRoot/user/page');
+                    } else {
+                        redirect('userBranch/user/page');
+                    }
+                }
             }
-
+        
             $this->session->set_flashdata('error_login', 'Email atau Password Salah');
             redirect('auth/login_page');
       }
