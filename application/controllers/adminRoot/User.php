@@ -100,10 +100,6 @@ class User extends CI_Controller
         }
     }
 
-    public function updateLastLogin($id) {
-        $this->db->set('last_login', 'NOW()', false);
-        $this->db->where('id', $id);
-        $this->db->update('users');
-    }
+    
     
 }

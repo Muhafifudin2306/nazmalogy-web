@@ -356,6 +356,7 @@ class UserModel extends CI_Model
 
     public function updateLastLogin($user_id) {
         $this->db->set('last_login', 'NOW()', false);
+        $this->db->set('created_at', 'created_at', false);
         $this->db->where('id', $user_id);
         $this->db->update('users');
     }
