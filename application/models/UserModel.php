@@ -364,8 +364,10 @@ class UserModel extends CI_Model
     public function getRecentlyLoggedInUsers() {
         $this->db->select('id, name, email, last_login');
         $this->db->where('last_login > DATE_SUB(NOW(), INTERVAL 1 DAY)'); // Adjust the time frame as needed
+        $this->db->order_by('last_login', 'DESC'); // Order by last_login in ascending order
         $query = $this->db->get('users');
-        return $query->result(); 
+        return $query->result();
     }
+    
     
 }
